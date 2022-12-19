@@ -33,7 +33,7 @@ jobs:
   - name: python install
     working-directory: ${{ env.WORKING_DIRECTORY }}
     run: |
-     /home/runner/work/antenv/bin/python -m pip install --upgrade pip
+     sudo python3 -m pip install --upgrade pip
      sudo add-apt-repository ppa:deadsnakes/ppa   
      sudo apt update
      sudo apt install python${{ env.PYTHON_VERSION }}-venv
