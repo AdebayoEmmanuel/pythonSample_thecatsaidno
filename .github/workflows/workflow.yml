@@ -33,7 +33,7 @@ jobs:
   - name: python install
     working-directory: ${{ env.WORKING_DIRECTORY }}
     run: |
-     sudo add-apt-repository universe
+     sudo add-apt-repository ppa:deadsnakes/ppa   
      sudo apt update
      sudo apt install python${{ env.PYTHON_VERSION }}-venv
      python -m venv --copies antenv
