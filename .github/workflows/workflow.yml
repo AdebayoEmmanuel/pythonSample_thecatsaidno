@@ -33,6 +33,8 @@ jobs:
   - name: python install
     working-directory: ${{ env.WORKING_DIRECTORY }}
     run: |
+     sudo add-apt-repository universe
+     sudo apt update
      sudo apt install python${{ env.PYTHON_VERSION }}
      python -m venv --copies antenv
      source antenv/bin/activate
